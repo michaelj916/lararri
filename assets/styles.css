@@ -1,5 +1,10 @@
+@font-face {
+    font-family: ferrari;
+    src: url(ferrorosso.ttf);
+}
+
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: ferrari;
     overflow: hidden;
     margin: 0;
     height: 100%;
@@ -18,7 +23,7 @@ ul {
     padding-bottom: 15px;
     padding-left: 5px;
     padding-right: 5px;
-    border: solid 1px #1b1b1b;
+    border: solid 0px #1b1b1b;
     border-radius: 1%;
 }
 
@@ -29,65 +34,52 @@ li {
     /* /*margin: 25px; */
 }
 
-li:hover {
-    background-color: #00000046;
-}
-
 a {
     text-decoration: none;
     color: #1b1b1b;
     font-weight: 500;
-    font-size: 18px;    
+    font-size: 24px;    
     padding: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
 a:hover {
-    text-decoration: line-through;
+    text-decoration: underline;
 }
 
 .vid-background {
     position: fixed;
-    opacity: 90%;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
 }
 
-#bckgrnd-vid {
-    width: 100%;
-    height: auto;
-    z-index: 10;
-}
-
-.banner {
-    position: fixed;
-    top:50%;
-    left: 0;
-    transform: translateY(-50%);
-    z-index: -1;
-}
-
-#banner-img {
-    width: 100%;
-    height: auto;
-}
-
-iframe {
+.vid-background iframe,
+.vid-background object,
+.vid-background embed {
+    position: relative;
     width: 1000px;
     height: 500px;
 }
 
-@media only screen and (max-width: 768px) {
 
-    #banner-img {
-        width: 150%;
-        height: auto;
+
+@media only screen and (max-width: 768px) {
+    .vid-background {
+        top: 45%;
+    }
+
+    .vid-background iframe,
+    .vid-background object,
+    .vid-background embed {
+        position: relative;
+        width: 414px;
+        height: 200px;
     }
 
     .nav-container {
-        top: 94%;
+        top: 86%;
         width: 97%;
     }
 
@@ -102,7 +94,7 @@ iframe {
     }
 
     a {
-        font-size: 13px;
-        padding: 2px;
+        font-size: 20px;
+        padding: 5px;
     }
 }
